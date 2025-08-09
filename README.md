@@ -2,6 +2,7 @@ Bluetooth print for Android
 
 A test Android application for direct printing on ESC/POS compatible thermal printers via Bluetooth. This project demonstrates how to handle Bluetooth connections, render data to a printable format, and send it to a Bluetooth printer. 
 
+
 How It Works:
   
   🔹 Direct Bluetooth Printing
@@ -15,6 +16,7 @@ How It Works:
     Dynamic UUID Discovery: Automatically queries the printer for its supported connection UUIDs, ensuring greater compatibility. 
     Chunked Data Transfer: Prevents printer buffer overflows by sending large image data in small, sequential packets. 
 
+
 Key Components:
   
   • PrintController: The "brain" of the app, which manages the printing logic for both text and HTML.
@@ -24,6 +26,8 @@ Key Components:
   • EscPosConverter: A specialized utility that converts a Bitmap into a raw ByteArray using the ESC/POS GS v 0 raster graphics command.
 
 Acknowledgements 🙏
+
 A significant portion of the logic for the bitmap-to-ESC/POS conversion EscPosConverter.kt and for the dynamic UUID discovery in BluetoothController.kt was carefully analyzed and adapted from the excellent open-source library DantSu/ESCPOS-ThermalPrinter-Android. The original Java code was translated to Kotlin and integrated into this project's architecture. 
+
 
 GitHub Repository: https://github.com/DantSu/ESCPOS-ThermalPrinter-Android
